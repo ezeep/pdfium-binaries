@@ -8,6 +8,7 @@ pushd "${SOURCE}"
 
 git apply -v "$PATCHES/shared_library.patch"
 git apply -v "$PATCHES/public_headers.patch"
+git apply -v "$PATCHES/printFormFields.patch"
 
 [ "${PDFium_V8:-}" == "enabled" ] && git apply -v "$PATCHES/v8_init.patch"
 

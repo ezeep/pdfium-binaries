@@ -1,0 +1,13 @@
+diff --git a/fpdfsdk/cpdfsdk_renderpage.cpp b/fpdfsdk/cpdfsdk_renderpage.cpp
+index 6a0869f28..95f0a3d25 100644
+--- a/fpdfsdk/cpdfsdk_renderpage.cpp
++++ b/fpdfsdk/cpdfsdk_renderpage.cpp
+@@ -72,7 +72,7 @@ void RenderPageImpl(CPDF_PageRenderContext* pContext,
+         pContext->m_pDevice->GetDeviceType() != DeviceType::kDisplay;
+ 
+     // TODO(https://crbug.com/pdfium/993) - maybe pass true here.
+-    const bool bShowWidget = false;
++    const bool bShowWidget = true;
+     pList->DisplayAnnots(pPage, pContext->m_pDevice.get(),
+                          pContext->m_pContext.get(), bPrinting, matrix,
+                          bShowWidget);

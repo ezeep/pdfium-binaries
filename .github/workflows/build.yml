@@ -6,7 +6,7 @@ on:
       branch:
         description: PDFium branch
         required: false
-        default: main
+        default: chromium/4831
       version:
         description: PDFium version
         required: false
@@ -32,7 +32,7 @@ jobs:
       - name: Set environment variables
         run: |
           cat >>$GITHUB_ENV <<END
-          PDFium_BRANCH=${{ github.event.inputs.branch || 'chromium/4831' }}
+          PDFium_BRANCH=${{ github.event.inputs.branch }}
           PDFium_CONFIGURATION=${{ matrix.cfg || 'Release' }}
           PDFium_TARGET_CPU=${{ matrix.target_cpu }}
           PDFium_TARGET_OS=${{ matrix.target_os }}

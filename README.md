@@ -22,6 +22,7 @@ Here are the download links for latest release:
   </tr>
 
   <tr>
+    <td rowspan="3">Windows</td>
     <td>x64</td>
     <td><a href="https://github.com/ezeep/pdfium-binaries/releases/latest/download/pdfium-win-x64.tgz">pdfium-win-x64.tgz</a></td>
   </tr>

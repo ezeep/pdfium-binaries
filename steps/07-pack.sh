@@ -2,8 +2,8 @@
 
 CFG=${CONFIGURATION:-Release}
 V8=${PDFium_V8:-disabled}
-OS=${PDFium_TARGET_OS:win}
-CPU=${PDFium_TARGET_CPU:x64}
+OS=${PDFium_TARGET_OS:-win}
+CPU=${PDFium_TARGET_CPU:-x64}
 VERSION=${PDFium_VERSION:-}
 PATCHES="$PWD/patches"
 PACKAGING="$PWD/packaging"

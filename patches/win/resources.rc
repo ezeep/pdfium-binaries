@@ -6,8 +6,8 @@ BEGIN
     BEGIN
         BLOCK "040904E4"
         BEGIN
-            VALUE "CompanyName",      "Google Inc."
-            VALUE "FileDescription",  "PDFium (compiled by github.com/bblanchon)"
+            VALUE "CompanyName",      "ThinPrint GmbH"
+            VALUE "FileDescription",  "PDFium (compiled for ezeep)"
             VALUE "FileVersion",      "$VERSION"
             VALUE "InternalName",     "pdfium"
             VALUE "OriginalFilename", "pdfium.dll"

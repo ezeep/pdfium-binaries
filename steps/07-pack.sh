@@ -2,10 +2,11 @@
 
 CFG=${CONFIGURATION:-Release}
 V8=${PDFium_V8:-disabled}
-OS=${PDFium_TARGET_OS:?}
-CPU=${PDFium_TARGET_CPU:?}
+OS=${PDFium_TARGET_OS:win}
+CPU=${PDFium_TARGET_CPU:x64}
 VERSION=${PDFium_VERSION:-}
 PATCHES="$PWD/patches"
+PACKAGING="$PWD/packaging"
 
 STAGING="$PWD/staging"
 SOURCE=${PDFium_SOURCE_DIR:-pdfium}
@@ -62,11 +63,16 @@ BUILD=$(echo "$VERSION" | cut -d. -f3)
 PATCH=$(echo "$VERSION" | cut -d. -f4)
 END
 
-ARTIFACT_BASE="$PWD/pdfium-$OS-$CPU"
-[ "$V8" == "enabled" ] && ARTIFACT_BASE="$ARTIFACT_BASE-v8"
-[ "$CFG" == "Debug" ] && ARTIFACT_BASE="$ARTIFACT_BASE-debug"
+ARTIFACT_NAME="pdfium-$OS-$CPU"
+[ "$V8" == "enabled" ] && ARTIFACT_NAME="$ARTIFACT_NAME-v8"
+[ "$CFG" == "Debug" ] && ARTIFACT_NAME="$ARTIFACT_NAME-debug"
+ARTIFACT_BASE="$PWD/$ARTIFACT_NAME"
 ARTIFACT="$ARTIFACT_BASE.tgz"
 
+export ARTIFACT_NAME ARTIFACT_NAME VERSION STAGING_BIN STAGING_RES PACKAGING
+
 pushd "$STAGING"
+envsubst < "$PACKAGING/pdfium-binaries.nuspec" > "$ARTIFACT_NAME.nuspec"
+nuget.exe pack "$ARTIFACT_NAME.nuspec"
 tar cvzf "$ARTIFACT" -- *
 popd

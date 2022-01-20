@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$ARTIFACT_NAME</id>
+    <version>$VERSION</version>
+    <title>Native PDFium DLL with V8 and XFA support</title>
+    <authors>ThinPrint GmbH</authors>
+    <owners>ThinPrint GmbH</owners>
+    <licenseUrl>https://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <projectUrl>http://github.com/pvginkel/PdfiumBuild</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Native 64-bit PDFium DLL with V8 and XFA support.</description>
+    <copyright>ThinPrint 1999 - $YEAR</copyright>
+    <tags>pdf pdfium native binary</tags>
+  </metadata>
+  <files>
+    <file src="$STAGING_BIN\pdfium.dll" target="Build\x64" />
+    <file src="$STAGING_RES\icudtl.dat" target="Build\x64" />
+    <file src="$STAGING_RES\snapshot_blob.bin" target="Build\x64" />
+    <file src="$PACKAGING\pdfium-binaries.props" target="Build" />
+  </files>
+</package>

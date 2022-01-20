@@ -10,7 +10,7 @@ on:
       version:
         description: PDFium version
         required: false
-        default: ""
+        default: 1.0.4831.1
 
 jobs:
   build:

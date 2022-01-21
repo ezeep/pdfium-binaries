@@ -17,6 +17,6 @@
     <file src="$STAGING_BIN\pdfium.dll" target="Build\x64" />
     <file src="$STAGING_RES\icudtl.dat" target="Build\x64" />
     <file src="$STAGING_RES\snapshot_blob.bin" target="Build\x64" />
-    <file src="$PACKAGING\pdfium-binaries.props" target="Build" />
+    <file src="$STAGING_RES\$ARTIFACT_NAME.props" target="Build" />
   </files>
 </package>

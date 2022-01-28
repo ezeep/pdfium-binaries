@@ -7,10 +7,10 @@
     <authors>ThinPrint GmbH</authors>
     <owners>ThinPrint GmbH</owners>
     <licenseUrl>https://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
-    <projectUrl>http://github.com/pvginkel/PdfiumBuild</projectUrl>
+    <projectUrl>https://github.com/ezeep/pdfium-binaries</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Native 64-bit PDFium DLL with V8 and XFA support.</description>
-    <copyright>ThinPrint 1999 - $YEAR</copyright>
+    <copyright>ThinPrint (c) 1999 - $YEAR</copyright>
     <tags>pdf pdfium native binary</tags>
   </metadata>
   <files>

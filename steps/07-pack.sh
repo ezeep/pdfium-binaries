@@ -1,6 +1,6 @@
 #!/bin/bash -eux
 
-CFG=${CONFIGURATION:-Release}
+CFG=${PDFium_CONFIGURATION:-Release}
 V8=${PDFium_V8:-disabled}
 OS=${PDFium_TARGET_OS:-win}
 CPU=${PDFium_TARGET_CPU:-x64}

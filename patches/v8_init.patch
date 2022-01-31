@@ -12,10 +12,10 @@ index 748f43f4f..82434ebb5 100644
    configs += [ "../:pdfium_strict_config" ]
 diff --git a/fpdfsdk/fpdf_libs.cpp b/fpdfsdk/fpdf_libs.cpp
 new file mode 100644
-index 000000000..18fb89dd2
+index 000000000..82d6fb64c
 --- /dev/null
 +++ b/fpdfsdk/fpdf_libs.cpp
-@@ -0,0 +1,22 @@
+@@ -0,0 +1,26 @@
 +#include "public/fpdfview.h"
 +
 +#include "v8.h"
@@ -30,6 +30,7 @@ index 000000000..18fb89dd2
 +
 +    v8::V8::InitializeExternalStartupData(resourcePath);
 +
++	// Initialize platform according to pdfium-sample (sample_with_v8.cc)
 +    v8::Platform* platform = v8::platform::NewDefaultPlatform().release();
 +    v8::V8::InitializePlatform(platform);
 +    v8::V8::Initialize();
